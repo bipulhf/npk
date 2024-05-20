@@ -51,6 +51,8 @@ export default function ChatForm() {
 
     setChat((chat) => [...chat, singleChat]);
     setLoading(true);
+    setFormData("");
+
     const response = await (
       await fetch("/api/gemini", {
         method: "POST",
@@ -67,7 +69,6 @@ export default function ChatForm() {
     };
     setLoading(false);
     setChat((chat) => [...chat, assistantChat]);
-    setFormData("");
   };
 
   return (
