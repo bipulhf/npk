@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Farm Crop Recommendation Web App
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The Farm Crop Recommendation Web App is designed to assist farmers in determining suitable crops based on soil nutrient levels. It integrates with the Gemini API to provide accurate crop recommendations based on nitrogen (N), phosphorus (P), and potassium (K) levels in the soil.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Input Soil Nutrient Values:** Users can manually input nitrogen, phosphorus, and potassium values for their soil.
+- **Integration with Gemini API:** The app communicates with the Gemini API to fetch crop recommendations based on the provided nutrient levels.
+- **User-friendly Interface:** Designed using Next.js, the app offers a responsive and intuitive interface for easy navigation and data input.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run the Farm Crop Recommendation Web App locally, follow these steps:
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Set up environment variables:
+   
+   Create a `.env.local` file in the root directory and add the following variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   Replace `your_gemini_api_key_here` with your actual Gemini API key.
+
+4. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:3000` to view the app.
+
+## Usage
+
+1. **Input Soil Nutrient Values:**
+   - On the app's homepage, enter the nitrogen, phosphorus, and potassium values for your soil in the designated input fields.
+
+2. **Get Crop Recommendations:**
+   - Click on the "Submit" button to submit the nutrient values to the Gemini API.
+   - The app will fetch and display recommended crops based on the provided soil nutrient levels.
+
+3. **View Recommendations:**
+   - Once recommendations are fetched, they will be displayed on the screen with details such as crop names, suitability, and additional information.
